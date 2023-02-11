@@ -1,6 +1,25 @@
 import "./App.css";
 
 function App() {
+<<<<<<< Updated upstream
+=======
+  const [inputValue, setInputValue] = useState("");
+  const [isValidNumber, setValidNumber] = useState(false);
+  
+  const setValue = (e) => {
+    setInputValue(e);
+    checkIfValid(inputValue);
+  }
+  
+  const checkIfValid = (e) => {
+    !isNaN(e) && e !== "" ? setValidNumber(true) : setValidNumber(false);
+  }
+
+  const isValid = useMemo(() => {
+    setInputValue(inputValue)}, [inputValue]);
+  
+
+>>>>>>> Stashed changes
   return (
     <div className="App">
      <div className="control has-icons-right">
