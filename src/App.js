@@ -2,7 +2,7 @@ import "./App.css";
 import React, {useState, useMemo} from 'react';
 
 function App() {
-  const [inputValue, setInputValue] = useState("");
+  const [text, setText] = useState("");
   const [isValidNumber, setValidNumber] = useState(false);
 
 
@@ -12,11 +12,11 @@ function App() {
   }
 
   const isValid = useMemo(() =>
-    checkIfValid(inputValue)
-    , [inputValue]);
+    checkIfValid(text)
+    , [text]);
 
   const setValue = (e) => {
-    setInputValue(e);
+    setText(e);
     setValidNumber(isValid);
   }
 
