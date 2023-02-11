@@ -1,8 +1,7 @@
 import "./App.css";
+import React, {useState, useMemo} from 'react';
 
 function App() {
-<<<<<<< Updated upstream
-=======
   const [inputValue, setInputValue] = useState("");
   const [isValidNumber, setValidNumber] = useState(false);
 
